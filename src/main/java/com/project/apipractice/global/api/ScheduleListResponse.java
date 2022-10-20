@@ -2,35 +2,33 @@ package com.project.apipractice.global.api;
 
 import lombok.*;
 
-import java.util.ArrayList;
+import java.util.List;
 
-@NoArgsConstructor
+
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class ScheduleListResponse {
 
     @Getter
     @Setter
     @ToString
     @NoArgsConstructor
-    public static class Body {
-        private ArrayList<Item> items;
-    }
-
-    @Getter
-    @Setter
-    @ToString
     @AllArgsConstructor
-    @NoArgsConstructor
-    public static class Item {
+    public static class Row {
 
-        private String SCHUL_NM; // 학교명
-        private String DDISH_NM; // 요리명
-        private String CAL_INFO; // 칼로리 정보
+        private String SCHUL_NM;
+        private String ALL_TI_YMD;
+        private String DDDEP_NM;
+        private String GRADE;
+        private String CLASS_NM;
+        private String PERIO;
+        private String ITRT_CNTNT;
 
     }
 
-    private Body body;
 
+    private List<Row> row;
 }

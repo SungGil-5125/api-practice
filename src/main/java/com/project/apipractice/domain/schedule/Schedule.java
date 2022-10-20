@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @AllArgsConstructor
@@ -20,11 +20,19 @@ public class Schedule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long scheduleId;
+    private Long id;
 
     private String schoolName;
 
-    private String dish;
+    private LocalDate date;
 
-    private String kcal;
+    private String department;
+
+    private String grade;
+
+    private String className;
+
+    private String period; // 교시
+
+    private String subject;
 }
